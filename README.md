@@ -1,6 +1,6 @@
 # 🧺 LaundryPro — Mini Laundry Order Management System
 
-A production-quality MERN stack app for managing laundry orders, built with React, Node.js, Express, and MongoDB.
+A full-stack MERN application for managing laundry/dry-cleaning orders with real-time tracking, billing, and dashboard analytics.
 
 ---
 
@@ -23,6 +23,14 @@ A production-quality MERN stack app for managing laundry orders, built with Reac
 - ✅ **Persistent MongoDB Storage** — Mongoose with timestamps
 - ✅ **Clean Admin UI** — Indigo/white/gray color scheme with Plus Jakarta Sans font
 
+---
+
+### 🧠 Tech Stack
+- Frontend: React.js, Tailwind CSS
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- Auth: JWT
+- Tools: Postman, Git, GitHub
 ---
 
 ## ⚙️ Setup Instructions
@@ -56,24 +64,6 @@ npm run build    # production build
 
 ---
 
-## 🌐 Deployment
-
-### Backend → Render (free tier)
-
-1. Push `backend/` to a GitHub repo
-2. Go to [render.com](https://render.com) → New Web Service
-3. Connect repo, set **Build Command**: `npm install`, **Start Command**: `node server.js`
-4. Add environment variables: `MONGO_URI`, `JWT_SECRET`, `NODE_ENV=production`, `PORT=5000`
-5. Deploy — note the URL (e.g. `https://laundry-api.onrender.com`)
-
-### Frontend → Vercel
-
-1. Push `frontend/` to a GitHub repo
-2. Go to [vercel.com](https://vercel.com) → New Project → Import repo
-3. Add environment variable: `REACT_APP_API_URL=https://laundry-api.onrender.com/api`
-4. Deploy
-
----
 
 ## 🤖 AI Usage Report
 
@@ -99,7 +89,7 @@ This project was scaffolded with assistance from **Claude (Anthropic)** and **Ch
 
 ## ⚖️ Tradeoffs
 
-### Skipped (due to 72h time constraint)
+### Skipped
 - **Role-based access** — Only one admin role; multi-user roles (staff/manager) not implemented
 - **Order editing** — Can update status but not edit garment details after creation
 - **Email/SMS notifications** — No delivery notifications to customers
@@ -138,16 +128,5 @@ laundry/
 
 ---
 
-## 📡 API Reference
-
-| Method | Endpoint | Auth | Description |
-|--------|----------|------|-------------|
-| POST | `/api/auth/register` | ❌ | Register admin |
-| POST | `/api/auth/login` | ❌ | Login, get JWT |
-| GET | `/api/auth/me` | ✅ | Get current user |
-| POST | `/api/orders` | ✅ | Create order |
-| GET | `/api/orders` | ✅ | List orders (search, filter, paginate) |
-| GET | `/api/orders/:id` | ✅ | Get single order |
-| PUT | `/api/orders/:id/status` | ✅ | Update status |
-| DELETE | `/api/orders/:id` | ✅ | Delete order |
-| GET | `/api/dashboard/stats` | ✅ | Dashboard stats |
+## Video Demo
+🎥 Loom / YouTube link: [https://youtu.be/LEa1M_9ORYQ](https://youtu.be/LEa1M_9ORYQ)
